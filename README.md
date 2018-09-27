@@ -2,22 +2,22 @@
 Twitter scrapping can be done in variety of ways. This repository works with one such solution.
 
 ## Logic behind this tweet_scrape.py
-1. Twitter is a social media platform that doesn't restrict "ethical" bot usage.
-2. Twitter's Search query page: [https://twitter.com/search-home](https://twitter.com/search-home) gives us access to a whole lot of tweets belonging to a particular query. Let's make a search request and see the results!
+* Twitter is a social media platform that doesn't restrict "ethical" bot usage.
+* Twitter's Search query page: [https://twitter.com/search-home](https://twitter.com/search-home) gives us access to a whole lot of tweets belonging to a particular query. Let's make a search request and see the results!
 
 |![Twitter Search example](./images/tweet_search.png)|
 |:-----:|
 |Search query on twitter|
 
-3. Now we know that making a query with a word can be made using syntax https://twitter.com/search?q=<word>
-4. But how to get specific tweet?
+* Now we know that making a query with a word can be made using syntax https://twitter.com/search?q=<word>
+* But how to get specific tweet?
   - Looking closely on inspection using dev tools in browser that each tweet belongs to a css class - "tweet-text".
 
 |![Twitter CSS example](./images/tweets_css.png)|
 |:-----:|
 |Search query on twitter|
 
-4. How can we do it programmatically?
+* How can we do it programmatically?
   - Selenium allows us to control a browser using simple programmable controls and even get the elements by class.
   - This means we can scroll down and load more tweets (selenium.webdriver.common.keys.Keys.PAGE_DOWN), and on the same time access specific css classes (selenium.webdriver.<Chrome/Firefox Driver>.find_elements_by_class_name('tweet-text')).
 
